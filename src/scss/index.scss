@@ -1,0 +1,21 @@
+// Helpers (vars, functions, mixins)
+@import 'helpers/index';
+
+// Plugins
+@import '~nouislider';
+@import '~swiper/swiper';
+@import '~flatpickr/dist/flatpickr.min.css';
+@import '~flatpickr/dist/plugins/monthSelect/style.css';
+@import '~tail.select/css/default/tail.select-light.min.css';
+
+// Fonts
+@import 'fonts';
+
+// Base
+@import 'base/common';
+
+// Components
+@import "components/index";
+
+// Pages
+@import "pages/index";

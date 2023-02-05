@@ -1,0 +1,35 @@
+.custom-select {
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+  }
+
+  &__icon {
+    display: flex;
+  }
+
+  &__dropdown {
+    display: none;
+    border: 1px solid #000000;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+  }
+
+  &.show & {
+    &__icon {
+      transform: rotate(180deg);
+    }
+    &__dropdown {
+      display: block;
+    }
+  }
+}

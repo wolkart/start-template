@@ -1,0 +1,81 @@
+@keyframes show-popup-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup {
+  align-items: center;
+  background-color: $light;
+  background-color: $secondary;
+  bottom: 0;
+  display: none;
+  left: 0;
+  overflow: auto;
+  -ms-overflow-style: none;
+  position: fixed;
+  right: 0;
+  scrollbar-width: none;
+  top: 0;
+  width: 100%;
+  z-index: 9998;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+  }
+
+  div:not([class]) {
+    width: 100%;
+  }
+
+  &.visible {
+    display: flex;
+  }
+
+  &.overflow {
+    align-items: flex-start;
+  }
+
+  &__close {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    pointer-events: all;
+    position: absolute;
+    right: 40px;
+    top: 31px;
+  }
+
+  &__container {
+    background-color: $white;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    padding: 40px;
+    pointer-events: all;
+    width: 100%;
+
+    .visible & {
+      animation: show-popup-animation 0.2s cubic-bezier(0.69, 0.01, 0.4, 1.01)
+        forwards;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+}

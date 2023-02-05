@@ -1,0 +1,12 @@
+/upload
+/webstat
+/.htaccess
+/web.config
+/robots.txt
+/sitemap*xml
+/i-status.php
+/node_modules
+/package-lock.json
+/yarn.lock
+/dist
+.idea

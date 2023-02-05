@@ -1,0 +1,82 @@
+.select-item {
+  margin: 0;
+
+  .select-label {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 40px;
+
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='black' stroke-width='2' stroke-linecap='square'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      border: 0;
+      top: 10px;
+      right: 10px;
+      opacity: 1;
+    }
+  }
+
+  .label-count {
+  }
+
+  .label-inner {
+    font-size: 16px;
+  }
+
+  .select-dropdown {
+    border-radius: 0 0 10px 10px;
+
+    .dropdown-inner {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    ul.dropdown-optgroup {
+      li.dropdown-option {
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.selected {
+          color: #ff8787;
+        }
+
+        @include hovering {
+          &:hover {
+            background-color: transparent;
+            color: #ff8787;
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    .select-label {
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 0 5px 1px rgba(255, 138, 138, .3);
+    }
+
+    .select-dropdown {
+      box-shadow: 1px 2px 5px 1px rgba(255, 138, 138, .3);
+    }
+  }
+
+  @include hovering {
+    &:hover {
+      .select-label {
+        box-shadow: 0 0 5px 1px rgba(255, 138, 138, .3);
+      }
+    }
+  }
+}

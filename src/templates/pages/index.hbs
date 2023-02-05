@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend template</title>
+</head>
+<body>
+<div class="wrapper">
+    {{> "../components/layout/header.hbs"}}
+    <main class="main">
+        <div class="container">
+            <h1 class="heading-1">Главная страница</h1>
+            <h3 class="heading-3">Hello Webpack Dev Server!</h3>
+            <div style="display: flex; flex-direction: column;">
+                <a class="link" href="about.html">Перейти на страницу About</a>
+                <a class="link" href="ui-kit.html">Перейти на страницу UI-Kit</a>
+            </div>
+
+            <div class="test-block">
+                <div class="test-block__inner">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolorum eum voluptatibus? Corporis delectus explicabo id impedit ipsam omnis pariatur placeat temporibus! At consectetur doloribus, facere impedit natus numquam veniam.
+                </div>
+            </div>
+        </div>
+    </main>
+    {{> "../components/layout/footer.hbs"}}
+</div>
+</body>
+</html>
+

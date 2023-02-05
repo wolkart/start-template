@@ -1,0 +1,301 @@
+$fontsPath: '../fonts';
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Thin.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Thin.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 100;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-ThinItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-ThinItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Light.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Light.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-LightItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-LightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Regular.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Italic.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Medium.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-MediumItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Bold.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: bold;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-BoldItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-Black.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-Black.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 900;
+  src:
+    url('#{$fontsPath}/Roboto/Roboto-BlackItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Roboto/Roboto-BlackItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 100;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Thin.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 100;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-ThinItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-ThinItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 200;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraLight.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 200;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraLightItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraLightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Light.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Light.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-LightItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-LightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Italic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-MediumItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-SemiBoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: bold;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-BoldItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-ExtraBoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-Black.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-Black.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 900;
+  src:
+    url('#{$fontsPath}/Montserrat/Montserrat-BlackItalic.woff2') format('woff2'),
+    url('#{$fontsPath}/Montserrat/Montserrat-BlackItalic.woff') format('woff');
+}
