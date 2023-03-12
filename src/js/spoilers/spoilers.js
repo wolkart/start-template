@@ -1,4 +1,4 @@
-import {slideDown, slideToggle, slideUp} from "../modules/util";
+import { slideToggle, slideUp } from "../modules/util/slide-toggle";
 
 const spoilersArray = document.querySelectorAll('[data-spoilers]')
 

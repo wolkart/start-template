@@ -1,4 +1,4 @@
-function isOverflow(element, childSelector = '.popup__container') {
+export const isOverflow = (element, childSelector = '.popup__container') => {
   const node = element.querySelector(childSelector);
 
   if (!node) return node;
@@ -9,5 +9,3 @@ function isOverflow(element, childSelector = '.popup__container') {
 
   return oveflow;
 }
-
-export default isOverflow;

@@ -8,8 +8,7 @@
     </div>
 </div>
 */
-
-import { isOverflow } from './util';
+import { isOverflow } from "./util/is-overflow";
 
 let popup;
 

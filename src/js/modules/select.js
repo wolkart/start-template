@@ -7,7 +7,7 @@ import select from 'tail.select/js/tail.select-full';
 
 const tail = { select };
 
-const initSelect = (element = document.querySelectorAll('.js-select')) => {
+export const initSelect = (element = document.querySelectorAll('.js-select')) => {
   const arrSelect = [];
 
   element.forEach((item) => {
@@ -62,5 +62,3 @@ const initSelect = (element = document.querySelectorAll('.js-select')) => {
 
   return arrSelect;
 };
-
-export default initSelect;

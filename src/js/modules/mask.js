@@ -8,7 +8,7 @@ import IMask from 'imask';
  * <input type="text" data-input-mask="+{7} (000) 000-00-00" />
  */
 
-function initMask() {
+export const initMask = () => {
   const inputs = document.querySelectorAll('[data-input-mask]');
 
   inputs.forEach((input) => {
@@ -35,5 +35,3 @@ function initMask() {
     });
   });
 }
-
-export default initMask;

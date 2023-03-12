@@ -1,4 +1,4 @@
-function formatDate(date, separator = '.') {
+export const formatDate = (date, separator = '.') => {
   const today = new Date(date);
   const yyyy = today.getFullYear();
 
@@ -15,5 +15,3 @@ function formatDate(date, separator = '.') {
 
   return Number.isNaN(+dd) ? '' : dd + separator + mm + separator + yyyy;
 }
-
-export default formatDate;

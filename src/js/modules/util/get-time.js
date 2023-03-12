@@ -1,4 +1,4 @@
-function getTime(seconds) {
+export const getTime = (seconds) => {
   const date = new Date(seconds * 1000);
   let mm = date.getUTCMinutes();
   let ss = date.getSeconds();
@@ -8,5 +8,3 @@ function getTime(seconds) {
 
   return `${mm}:${ss}`;
 }
-
-export default getTime;

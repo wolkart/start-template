@@ -2,11 +2,11 @@ const path = require('path');
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 // const { Handlebars } = require("handlebars");
 const chokidar = require('chokidar');
 const fs = require('fs')
@@ -16,6 +16,19 @@ const isProd = !isDev
 
 const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 const distPath = path.resolve(__dirname, 'dist');
+const entries = {
+  css: './src/scss/entries/',
+  js: './src/js/entries/',
+};
+let completed = {};
+
+fs.readdirSync(path.resolve(__dirname, entries.css)).forEach((file) => {
+  completed[file.replace('.scss', '')] = entries.css + file;
+});
+
+fs.readdirSync(path.resolve(__dirname, entries.js)).forEach((file) => {
+  completed[file.replace('.js', '')] = entries.js + file;
+});
 
 const optimization = () => {
   const config = {
@@ -36,12 +49,12 @@ const optimization = () => {
 
 const cssLoaders = extra => {
   const loaders = [
-    isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+    MiniCssExtractPlugin.loader,
     {
       loader: 'css-loader',
-      options: { sourceMap: isDev, importLoaders: 1 }
+      options: {sourceMap: isDev, importLoaders: 1, url: false}
     },
-    { loader: 'postcss-loader', options: { sourceMap: isDev } },
+    {loader: 'postcss-loader', options: {sourceMap: isDev}},
   ]
 
   if (extra) {
@@ -51,30 +64,28 @@ const cssLoaders = extra => {
   return loaders
 }
 
-// Handlebars.registerPartials(__dirname + '/src/templates/ui-components/)
-
 function generateHtmlPlugins(templateDir) {
-    const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-    return templateFiles.map(item => {
-      const parts = item.split('.');
-      const name = parts[0];
-      const extension = parts[1];
-      return new HTMLWebpackPlugin({
-        filename: `${name}.html`,
-        template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-        minify: {
-          collapseWhitespace: isProd
-        },
-        // inject: false,
-      })
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map(item => {
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HTMLWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      minify: {
+        collapseWhitespace: isProd
+      },
+      // inject: false,
     })
-  }
+  })
+}
 
 const htmlPlugins = generateHtmlPlugins('./src/templates/pages/')
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: completed,
   output: {
     filename: 'js/' + filename('js'),
     path: distPath,
@@ -137,8 +148,12 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/assets/images/'),
-          to: path.resolve(__dirname, 'dist/assets/images')
+          from: path.resolve(__dirname, 'src/images/'),
+          to: path.resolve(__dirname, 'dist/images/')
+        },
+        {
+          from: path.resolve(__dirname, 'src/fonts/'),
+          to: path.resolve(__dirname, 'dist/fonts/')
         },
       ]
     }),

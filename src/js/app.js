@@ -1,17 +1,15 @@
-import { ready, addEvent, changeQuantity } from './modules/util';
-
-import {
-  initLazy,
-  initRange,
-  initMask,
-  initPopup,
-  showPopup,
-  initSelect,
-  customSelect,
-  initGallery,
-  initValidate,
-  initFlatpickr
-} from './modules';
+import { ready } from "./modules/util/ready";
+import { addEvent } from "./modules/util/add-event";
+import { changeQuantity } from "./modules/util/quantity";
+import { initSelect } from "./modules/select";
+import { initMask } from "./modules/mask";
+import { initLazy } from "./modules/lazy";
+import { initGallery } from "./modules/gallery";
+import { initRange } from "./modules/range";
+import { initValidate } from "./modules/validation";
+import { initPopup } from "./modules/popup";
+import { customSelect } from "./modules/customSelect";
+import { initFlatpickr } from "./modules/datepicker";
 
 addEvent('keypress', '.js-only-numbers', ({ key }) => {
   if (!(key >= 0 && key <= 9)) {
@@ -55,10 +53,5 @@ function initApp() {
 ready(() => {
   initApp();
 });
-
-window.initSelect = initSelect;
-window.initMask = initMask;
-window.initValidate = initValidate;
-window.showPopup = showPopup;
 
 window.initApp = initApp;

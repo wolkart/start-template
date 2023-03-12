@@ -1,4 +1,4 @@
-function changeQuantity(button, value) {
+export const changeQuantity = (button, value) => {
   if (button.length <= 0) return;
 
   const input = button.parentElement.querySelector('.js-quantity');
@@ -9,5 +9,3 @@ function changeQuantity(button, value) {
 
   if (Number.isNaN(+input.value) || input.value === '') input.value = 1;
 }
-
-export default changeQuantity;

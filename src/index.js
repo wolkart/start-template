@@ -1,2 +1,1 @@
-import './js/entries/main'
-import './scss/index'
+import './js/entries/main';

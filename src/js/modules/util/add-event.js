@@ -6,7 +6,7 @@
  * addEvent('click', '.node', (e) => console.log(e.target));
  */
 
-function addEvent(eventName, element, callbak = (f) => f) {
+export const addEvent = (eventName, element, callbak = (f) => f) => {
   const nodes = document.querySelectorAll(element);
 
   if (nodes.length > 0) {
@@ -17,5 +17,3 @@ function addEvent(eventName, element, callbak = (f) => f) {
     });
   }
 }
-
-export default addEvent;

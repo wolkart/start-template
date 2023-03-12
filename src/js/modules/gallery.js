@@ -7,7 +7,7 @@ import 'lightgallery.js';
  * https://sachinchoolur.github.io/lightgallery.js/ - demo
  */
 
-function initGallery() {
+export const initGallery = () => {
   const gallery = document.querySelector('.js-gallery');
 
   if (gallery) {
@@ -18,5 +18,3 @@ function initGallery() {
     });
   }
 }
-
-export default initGallery;

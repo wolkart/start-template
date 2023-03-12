@@ -5,7 +5,7 @@ import Bouncer from 'formbouncerjs';
  * https://cferdinandi.github.io/bouncer/ - example
  */
 
-function initValidate() {
+export const initValidate = () => {
   const bouncer = new Bouncer('[data-validate]', {
     disableSubmit: true,
     customValidations: {
@@ -100,5 +100,3 @@ function initValidate() {
 
   return bouncer;
 }
-
-export default initValidate;

@@ -4,7 +4,7 @@ import noUiSlider from 'nouislider';
  * https://refreshless.com/nouislider/
  */
 
-function initRange() {
+export const initRange = () => {
   const ranges = document.querySelectorAll('.js-range');
 
   if (!ranges) return;
@@ -44,5 +44,3 @@ function initRange() {
     });
   });
 }
-
-export default initRange;
